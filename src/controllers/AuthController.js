@@ -1,5 +1,5 @@
-const User = require("../models/User");
-const NGO = require("../models/NGO");
+const User = require("../model/User.model");
+const NGO = require("../model/NGO.model");
 const jwt = require("jsonwebtoken");
 
 // Generate JWT

@@ -1,8 +1,8 @@
-const User = require("../models/User");
-const Food = require("../models/Food");
-const NGO = require("../models/NGO");
-const Request = require("../models/Request");
-const Rating = require("../models/Rating");
+const User = require("../model/User.model");
+const Food = require("../model/Food.model");
+const NGO = require("../model/NGO.model");
+const Request = require("../model/Request.model");
+const Rating = require("../model/Rating.model");
 
 // @route   GET /api/admin/dashboard
 // @desc    Get platform-wide stats

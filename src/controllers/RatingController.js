@@ -1,6 +1,6 @@
-const Rating = require("../models/Rating");
-const NGO = require("../models/NGO");
-const Request = require("../models/Request");
+const Rating = require("../model/Rating.model");
+const NGO = require("../model/NGO.model");
+const Request = require("../model/Request.model");
 
 // @route   POST /api/ratings
 // @desc    Rate an NGO after completed delivery

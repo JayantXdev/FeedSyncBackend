@@ -1,6 +1,6 @@
-const Food = require("../models/Food");
-const User = require("../models/User");
-const Notification = require("../models/Notification");
+const Food = require("../model/Food.model");
+const User = require("../model/User.model");
+const Notification = require("../model/Notification.model");
 
 // AI suggestion based on food type and expiry (simple rule-based for college project)
 const generateAISuggestion = (title, expiryTime, quantity, foodType) => {

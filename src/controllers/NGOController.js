@@ -1,5 +1,5 @@
-const NGO = require("../models/NGO");
-const User = require("../models/User");
+const NGO = require("../model/NGO.model");
+const User = require("../model/User.model");
 
 // @route   POST /api/ngo/register
 // @desc    Register NGO profile (linked to user)

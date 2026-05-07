@@ -1,8 +1,8 @@
-const Request = require("../models/Request");
-const Food = require("../models/Food");
-const NGO = require("../models/NGO");
-const Notification = require("../models/Notification");
-const User = require("../models/User");
+const Request = require("../model/Request.model");
+const Food = require("../model/Food.model");
+const NGO = require("../model/NGO.model");
+const Notification = require("../model/Notification.model");
+const User = require("../model/User.model");
 
 // Helper to create a notification
 const notify = async (recipientId, type, title, message, foodId, requestId) => {

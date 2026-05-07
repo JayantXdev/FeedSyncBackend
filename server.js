@@ -4,8 +4,8 @@ const { Server } = require("socket.io");
 const cors = require("cors");
 const morgan = require("morgan");
 const dotenv = require("dotenv");
-const connectDB = require("./config/db");
-const errorHandler = require("./middleware/errorHandler");
+const connectDB = require("./src/config/db");
+const errorHandler = require("./src/middleware/errorHandler");
 
 dotenv.config();
 
@@ -31,13 +31,13 @@ app.use(express.urlencoded({ extended: true }));
 if (process.env.NODE_ENV === "development") app.use(morgan("dev"));
 
 // ─── API Routes ─────────────────────────────────────────────────────────────
-app.use("/api/auth", require("./routes/auth"));
-app.use("/api/food", require("./routes/food"));
-app.use("/api/ngo", require("./routes/ngo"));
-app.use("/api/requests", require("./routes/requests"));
-app.use("/api/ratings", require("./routes/ratings"));
-app.use("/api/notifications", require("./routes/notifications"));
-app.use("/api/admin", require("./routes/admin"));
+app.use("/api/auth", require("./src/routes/AuthRoutes.js"));
+app.use("/api/food", require("./src/routes/FoodRoutes.js"));
+app.use("/api/ngo", require("./src/routes/NGORoutes.js"));
+app.use("/api/requests", require("./src/routes/RequestRoutes.js"));
+app.use("/api/ratings", require("./src/routes/RatingRoutes.js"));
+app.use("/api/notifications", require("./src/routes/NotificationRoutes.js"));
+app.use("/api/admin", require("./src/routes/AdminRoutes.js"));
 
 // Health check
 app.get("/", (req, res) => res.json({ message: "🌿 FeedSync API is running!", version: "1.0.0" }));
